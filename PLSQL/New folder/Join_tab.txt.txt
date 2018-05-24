@@ -1,0 +1,26 @@
+CREATE TABLE Class(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   PRIMARY KEY (ID)
+);
+
+
+
+INSERT INTO Class values(1, 'Ramesh');
+INSERT INTO Class values(2, 'Khilan');
+INSERT INTO Class values(4, 'kaushik');
+
+
+
+CREATE TABLE Class_info(
+   ID   INT              NOT NULL,
+   Address VARCHAR (20)     NOT NULL,
+   PRIMARY KEY (ID)
+);
+
+
+
+INSERT INTO Class_info values (1, 'Mumbai');
+INSERT INTO Class_info values (2, 'Kalyan');
+INSERT INTO Class_info values (3, 'Pune');
+

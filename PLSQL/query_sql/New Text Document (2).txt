@@ -1,0 +1,14 @@
+set serveroutput on;
+declare
+cursor cur_1 is
+select id,name,age from customers
+where id>1;
+begin
+for rec1 in cur_1
+loop
+if (rec1.id>1 and rec1.id<=3) then
+dbms_output.put_line('Good');
+dbms_output.put_line(rec1.name || ' ' || rec1.age);
+end if;
+end loop;
+end;
