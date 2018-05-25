@@ -1,0 +1,8 @@
+DECLARE
+
+   code customers.id%type:= '&cust_id';
+
+BEGIN
+   c_package.delcustomer(code);
+
+END;

@@ -1,0 +1,4 @@
+ begin
+    insertuser('&id','&name','&age','&address','&salary');
+   dbms_output.put_line('record inserted succcessfully');
+   end;

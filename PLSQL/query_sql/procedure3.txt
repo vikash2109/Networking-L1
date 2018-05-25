@@ -1,0 +1,18 @@
+create or replace procedure listuser
+(
+v_id  number
+)
+is 
+cursor cur1 is
+select * where id = v_id;
+begin
+for rec1 in cur1
+loop
+dbms_output.put_line(rec1.id ||'   ' ||rec1.name || '  ' || rec1.age|| '   ' || rec1.address );
+
+end loop;
+end;
+
+
+--call userlist(id);
+--exec userlist(id);

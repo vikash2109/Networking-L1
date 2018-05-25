@@ -1,0 +1,10 @@
+create or replace procedure insertuser(
+id in number,
+name in varchar2,
+age in number,
+address in varchar2,
+salary in number)
+is 
+begin
+insert into customers values(id,name,age,address,salary);
+end;

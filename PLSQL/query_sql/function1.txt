@@ -1,0 +1,11 @@
+create or replace function mul(n1 in number,n2 in number,n3 in number)
+return number
+is
+n4 number(8);
+begin
+n4:=n1*n2*n3;
+dbms_output.put_line('Multiplication is:' || n4);
+return n4;
+end;
+
+--SQL> select mul(10,13,45) from dual;

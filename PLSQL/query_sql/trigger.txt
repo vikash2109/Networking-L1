@@ -1,0 +1,26 @@
+create or replace trigger superheroes_audit
+before insert or delete or update on sh
+for each row
+enable
+declare
+v_user varchar2(30);
+v_date varchar2(30);
+begin
+select user , to_char(sysdate,'DD/MM/YYYY HH24:MI:ss') into v_user, v_date from dual;
+
+if inserting then
+insert into sh_audit(new_name,old_name,user_name,entry_date,operation)
+  values(:new.sh_name,null,v_user,v_date,'Insert');
+
+elsif deleting then
+insert into sh_audit(new_name,old_name,user_name,entry_date,operation)
+ values(null,:old.sh_name,v_user,v_date,'Delete');
+
+elsif updating then
+insert into sh_audit(new_name,old_name,user_name,entry_date,operation)
+  values(:new.sh_name,:old.sh_name,v_user,v_date,'Update');
+
+end if;
+end;
+
+

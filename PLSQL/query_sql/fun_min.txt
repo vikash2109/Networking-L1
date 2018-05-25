@@ -1,0 +1,20 @@
+  create or replace function min1(n1 in number,n2 in number,n3 in number)
+    return number
+    is
+    n4 number(8);
+    begin
+    if (n1<n2) and (n1<n3) then
+     n4:=n1;
+    elsif (n2<n1) and (n2<n3) then
+    n4:=n2;
+   else
+   n4:=n3;
+   
+   end if;
+dbms_output.put_line('input number is:' || n1 ||' '|| n2|| ' '|| n3 );
+   dbms_output.put_line('smallest number is:' ||n4);
+   return n4;
+   end;
+---------------------------------------------------------------------------------
+
+-- SQL> select min1(12,13,56) from dual;
