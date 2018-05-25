@@ -1,0 +1,220 @@
+declare
+v_pan pan.pan_number%type ;
+v_adhar  adhar.adhar%type;
+v_sal emp.salary%type;
+cursor cur1 is
+select id,name from customers where rownum<20;
+begin
+--{
+ for rec1 in cur1
+loop
+-- fetching Pan Number
+--{
+begin
+select pan_number into v_pan from pan where pan.id=rec1.id;
+Exception when no_data_found
+then
+v_pan:='Pan Not found';
+--}
+end;
+--fetching adhar number
+begin
+select adhar into v_adhar from adhar where adhar.id=rec1.id;
+Exception when no_data_found
+then
+v_adhar:='adhar Not found';
+--}
+end;
+--fetching salary
+begin
+select salary into v_sal from emp where emp.id=rec1.id;
+Exception when no_data_found
+then
+v_sal:=' salary Not found';
+--}
+end;
+dbms_output.put_line('ID : ' || rec1.id || '      Name : ' || rec1.name || '    PAN : ' || v_pan || '    Adhar : '|| v_adhar || '     Salary :' || v_sal);
+/*dbms_output.put_line('Name : ' || rec1.name);
+dbms_output.put_line('PAN : ' || v_pan);
+dbms_output.put_line('Adhar : '|| v_adhar);
+dbms_output.put_line('Salary :' || v_sal);*/
+dbms_output.put_line(chr(9));
+end loop;
+end;
+/
+declare
+v_pan pan.pan_number%type ;
+v_adhar  adhar.adhar%type;
+v_sal emp.salary%type;
+cursor cur1 is
+select id,name from customers where rownum<20;
+begin
+--{
+ for rec1 in cur1
+loop
+-- fetching Pan Number
+--{
+begin
+select pan_number into v_pan from pan where pan.id=rec1.id;
+Exception when no_data_found
+then
+v_pan:='Pan Not found';
+--}
+end;
+--fetching adhar number
+begin
+select adhar into v_adhar from adhar where adhar.id=rec1.id;
+Exception when no_data_found
+then
+v_adhar:='adhar Not found';
+--}
+end;
+--fetching salary
+begin
+select salary into v_sal from emp where emp.id=rec1.id;
+Exception when no_data_found
+then
+v_sal:=' salary Not found';
+--}
+end;
+dbms_output.put_line('ID : ' || rec1.id || '      Name : ' || rec1.name || '    PAN : ' || v_pan || '    Adhar : '|| v_adhar || '     Salary :' || v_sal);
+/*dbms_output.put_line('Name : ' || rec1.name);
+dbms_output.put_line('PAN : ' || v_pan);
+dbms_output.put_line('Adhar : '|| v_adhar);
+dbms_output.put_line('Salary :' || v_sal);*/
+dbms_output.put_line(chr(9));
+end loop;
+end;
+/
+declare
+v_pan pan.pan_number%type ;
+v_adhar  adhar.adhar%type;
+v_sal emp.salary%type;
+cursor cur1 is
+select id,name from customers where rownum<20;
+begin
+--{
+ for rec1 in cur1
+loop
+-- fetching Pan Number
+--{
+begin
+select pan_number into v_pan from pan where pan.id=rec1.id;
+Exception when no_data_found
+then
+v_pan:='Pan Not found';
+--}
+end;
+--fetching adhar number
+begin
+select adhar into v_adhar from adhar where adhar.id=rec1.id;
+Exception when no_data_found
+then
+v_adhar:='adhar Not found';
+--}
+end;
+--fetching salary
+begin
+select salary into v_sal from emp where emp.id=rec1.id;
+Exception when no_data_found
+then
+v_sal:=' salary Not found';
+--}
+end;
+dbms_output.put_line('ID : ' || rec1.id || '      Name : ' || rec1.name || '    PAN : ' || v_pan || '    Adhar : '|| v_adhar || '     Salary :' || v_sal);
+/*dbms_output.put_line('Name : ' || rec1.name);
+dbms_output.put_line('PAN : ' || v_pan);
+dbms_output.put_line('Adhar : '|| v_adhar);
+dbms_output.put_line('Salary :' || v_sal);*/
+dbms_output.put_line(chr(9));
+end loop;
+end;
+/
+declare
+v_pan pan.pan_number%type ;
+v_adhar  adhar.adhar%type;
+v_sal emp.salary%type;
+cursor cur1 is
+select id,name from customers where rownum<20;
+begin
+--{
+ for rec1 in cur1
+loop
+-- fetching Pan Number
+--{
+begin
+select pan_number into v_pan from pan where pan.id=rec1.id;
+Exception when no_data_found
+then
+v_pan:='Pan Not found';
+--}
+end;
+--fetching adhar number
+begin
+select adhar into v_adhar from adhar where adhar.id=rec1.id;
+Exception when no_data_found
+then
+v_adhar:='adhar Not found';
+--}
+end;
+--fetching salary
+begin
+select salary into v_sal from emp where emp.id=rec1.id;
+Exception when no_data_found
+then
+v_sal:=' salary Not found';
+--}
+end;
+dbms_output.put_line('ID : ' || rec1.id || '      Name : ' || rec1.name || '    PAN : ' || v_pan || '    Adhar : '|| v_adhar || '     Salary :' || v_sal);
+/*dbms_output.put_line('Name : ' || rec1.name);
+dbms_output.put_line('PAN : ' || v_pan);
+dbms_output.put_line('Adhar : '|| v_adhar);
+dbms_output.put_line('Salary :' || v_sal);*/
+dbms_output.put_line(chr(9));
+end loop;
+end;
+/
+declare
+v_pan pan.pan_number%type ;
+v_adhar  adhar.adhar%type;
+v_sal emp.salary%type;
+cursor cur1 is
+select id,name from customers where rownum<20;
+begin
+--{
+ for rec1 in cur1
+loop
+-- fetching Pan Number
+--{
+begin
+select pan_number into v_pan from pan where pan.id=rec1.id;
+Exception when no_data_found
+then
+v_pan:='Pan Not found';
+--}
+end;
+--fetching adhar number
+begin
+select adhar into v_adhar from adhar where adhar.id=rec1.id;
+Exception when no_data_found
+then
+v_adhar:='adhar Not found';
+--}
+end;
+--fetching salary
+begin
+select salary into v_sal from emp where emp.id=rec1.id;
+Exception when no_data_found
+then
+v_sal:=' salary Not found';
+--}
+end;
+dbms_output.put_line('ID : ' || rec1.id || '      Name : ' || rec1.name || '    PAN : ' || v_pan || '    Adhar : '|| v_adhar || '     Salary :' || v_sal);
+/*dbms_output.put_line('Name : ' || rec1.name);
+dbms_output.put_line('PAN : ' || v_pan);
+dbms_output.put_line('Adhar : '|| v_adhar);
+dbms_output.put_line('Salary :' || v_sal);*/
+dbms_output.put_line(chr(9));
+end loop;
+end;
+/
